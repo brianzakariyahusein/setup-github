@@ -64,23 +64,3 @@ git push -u origin main
 
 Jika langkah-langkah di atas berhasil, buka halaman profil GitHub kamu. Kamu akan melihat kontribusi pertama di grafik aktivitas GitHub.
 
-## 8. (Opsional) Menjalankan SSH Authentication (Agar Tidak Perlu Login Setiap Push)
-
-1. Jalankan perintah berikut untuk membuat SSH Key:
-
-   ```sh
-   ssh-keygen -t ed25519 -C "emailkamu@example.com"
-   ```
-
-2. Tambahkan kunci SSH ke GitHub:
-
-   - Salin SSH Key dengan menjalankan:
-     ```sh
-     cat ~/.ssh/id_ed25519.pub
-     ```
-   - Buka GitHub → Settings → SSH and GPG keys → New SSH Key → Paste kunci tersebut → Save.
-
-3. Ubah remote URL menjadi SSH:
-   ```sh
-   git remote set-url origin git@github.com:username/repository.git
-   ```
